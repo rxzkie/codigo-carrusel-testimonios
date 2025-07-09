@@ -1,7 +1,7 @@
 <div class="testimonial-carousel">
     <div class="carousel-container">
         <div class="testimonial-track">
-            <div class="testimonial-item active" data-index="0" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop&crop=face');">
+            <div class="testimonial-item active" data-index="0" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=800&fit=crop&crop=face');">
                 <div class="testimonial-overlay">
                     <div class="testimonial-content">
                         <div class="quote-icon">❝</div>
@@ -14,7 +14,7 @@
                 </div>
             </div>
             
-            <div class="testimonial-item" data-index="1" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop&crop=face');">
+            <div class="testimonial-item" data-index="1" style="background-image: url('https://i.ibb.co/4nkJQ3xv/Holger-Nu-ez.png');">
                 <div class="testimonial-overlay">
                     <div class="testimonial-content">
                         <div class="quote-icon">❝</div>
@@ -27,7 +27,7 @@
                 </div>
             </div>
             
-            <div class="testimonial-item" data-index="2" style="background-image: url('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&h=600&fit=crop&crop=face');">
+            <div class="testimonial-item" data-index="2" style="background-image: url('https://i.ibb.co/LzTZ6KTQ/Marco-Baeza.png');">
                 <div class="testimonial-overlay">
                     <div class="testimonial-content">
                         <div class="quote-icon">❝</div>
@@ -40,7 +40,7 @@
                 </div>
             </div>
             
-            <div class="testimonial-item" data-index="3" style="background-image: url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&h=600&fit=crop&crop=face');">
+            <div class="testimonial-item" data-index="3" style="background-image: url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=1200&h=800&fit=crop&crop=face');">
                 <div class="testimonial-overlay">
                     <div class="testimonial-content">
                         <div class="quote-icon">❝</div>
@@ -53,7 +53,7 @@
                 </div>
             </div>
             
-            <div class="testimonial-item" data-index="4" style="background-image: url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&h=600&fit=crop&crop=face');">
+            <div class="testimonial-item" data-index="4" style="background-image: url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=1200&h=800&fit=crop&crop=face');">
                 <div class="testimonial-overlay">
                     <div class="testimonial-content">
                         <div class="quote-icon">❝</div>
@@ -66,7 +66,7 @@
                 </div>
             </div>
             
-            <div class="testimonial-item" data-index="5" style="background-image: url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&h=600&fit=crop&crop=face');">
+            <div class="testimonial-item" data-index="5" style="background-image: url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=1200&h=800&fit=crop&crop=face');">
                 <div class="testimonial-overlay">
                     <div class="testimonial-content">
                         <div class="quote-icon">❝</div>
@@ -79,7 +79,7 @@
                 </div>
             </div>
             
-            <div class="testimonial-item" data-index="6" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop&crop=face');">
+            <div class="testimonial-item" data-index="6" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=800&fit=crop&crop=face');">
                 <div class="testimonial-overlay">
                     <div class="testimonial-content">
                         <div class="quote-icon">❝</div>
@@ -113,50 +113,52 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
+* { box-sizing: border-box; }
+
 .testimonial-carousel {
-    max-width: 1400px;
+    width: 100%;
+    max-width: 2000px;
     margin: 0 auto;
     padding: 20px;
     font-family: 'Poppins', sans-serif;
+    position: relative;
 }
 
 .carousel-container {
     position: relative;
     overflow: hidden;
-    border-radius: 15px;
+    border-radius: 30px;
+    width: 100%;
+    height: 80vh;
+    min-height: 500px;
     cursor: grab;
     user-select: none;
+    margin: 40px 0;
 }
 
-.carousel-container:active {
-    cursor: grabbing;
-}
+.carousel-container:active { cursor: grabbing; }
 
 .testimonial-track {
     display: flex;
     transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     will-change: transform;
-    gap: 20px;
-    padding: 20px 50px;
+    height: 100%;
 }
 
 .testimonial-item {
-    flex: 0 0 320px;
-    height: 400px;
-    border-radius: 15px;
+    flex: 0 0 calc(100% - 40px);
+    height: 100%;
+    border-radius: 30px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
     cursor: pointer;
-    transform: scale(0.85);
-    opacity: 0.7;
     transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    margin-right: 40px;
 }
 
 .testimonial-item.active {
-    transform: scale(1);
-    opacity: 1;
     z-index: 2;
 }
 
@@ -165,59 +167,49 @@
     inset: 0;
     background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 100%);
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    padding: 25px 20px;
-    border-radius: 15px;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 80px 60px;
+    border-radius: 30px;
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 
-.testimonial-item.active .testimonial-overlay {
-    opacity: 1;
-}
+.testimonial-item.active .testimonial-overlay { opacity: 1; }
 
 .testimonial-content {
     text-align: left;
-    max-width: 100%;
+    max-width: 50%;
+    width: 50%;
     transform: translateY(20px);
     transition: transform 0.3s ease;
 }
 
-.testimonial-item.active .testimonial-content {
-    transform: translateY(0);
-}
+.testimonial-item.active .testimonial-content { transform: translateY(0); }
 
 .quote-icon {
-    font-size: 40px;
+    font-size: 80px;
     color: rgba(255, 255, 255, 0.4);
     line-height: 1;
-    margin-bottom: 15px;
-    text-align: left;
+    margin-bottom: 30px;
 }
 
 .testimonial-text {
-    font-size: 14px;
-    line-height: 1.4;
+    font-size: 18px;
+    line-height: 1.5;
     color: #fff;
-    margin-bottom: 15px;
+    margin-bottom: 40px;
     font-style: italic;
     text-shadow: 0 2px 4px rgba(0,0,0,0.5);
     font-weight: 400;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
 }
 
-.author-info {
-    margin-top: 15px;
-}
+.author-info { margin-top: 30px; }
 
 .author-info h4 {
-    margin: 0 0 5px 0;
+    margin: 0 0 12px 0;
     color: #fff;
-    font-size: 12px;
+    font-size: 24px;
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -226,7 +218,7 @@
 
 .author-info span {
     color: #fff;
-    font-size: 10px;
+    font-size: 20px;
     font-weight: 600;
     text-shadow: 0 1px 2px rgba(0,0,0,0.5);
 }
@@ -238,7 +230,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 0 50px;
     pointer-events: none;
     z-index: 10;
 }
@@ -246,10 +238,10 @@
 .nav-btn {
     background: rgba(255,255,255,0.9);
     border: none;
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
-    font-size: 24px;
+    font-size: 32px;
     cursor: pointer;
     box-shadow: 0 5px 20px rgba(0,0,0,0.2);
     transition: all 0.3s ease;
@@ -270,86 +262,103 @@
 
 .carousel-dots {
     position: absolute;
-    bottom: 20px;
+    bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 15px;
     z-index: 10;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px 20px;
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
 }
 
 .dot {
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.4);
     cursor: pointer;
     transition: all 0.3s ease;
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.6);
 }
 
 .dot.active {
     background: #fff;
-    transform: scale(1.3);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    transform: scale(1.5);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    border: 2px solid #fff;
 }
 
 .dot:hover {
     background: rgba(255, 255, 255, 0.8);
-    transform: scale(1.1);
+    transform: scale(1.2);
+    border: 2px solid rgba(255, 255, 255, 0.9);
 }
 
-/* Responsive Design */
+@media (max-width: 1400px) {
+    .testimonial-text { font-size: 16px; }
+    .quote-icon { font-size: 70px; }
+    .author-info h4 { font-size: 22px; }
+    .author-info span { font-size: 18px; }
+    .testimonial-content { max-width: 55%; width: 55%; }
+}
+
 @media (max-width: 1200px) {
-    .testimonial-track { gap: 18px; padding: 18px 40px; }
-    .testimonial-item { flex: 0 0 300px; height: 380px; }
-    .testimonial-overlay { padding: 22px 18px; }
-    .quote-icon { font-size: 38px; }
-    .testimonial-text { font-size: 13px; }
-    .author-info h4 { font-size: 11px; }
-    .author-info span { font-size: 9px; }
-    .nav-btn { width: 45px; height: 45px; font-size: 22px; }
+    .testimonial-text { font-size: 15px; }
+    .quote-icon { font-size: 60px; }
+    .author-info h4 { font-size: 20px; }
+    .author-info span { font-size: 16px; }
+    .carousel-container { height: 70vh; margin: 30px 0; }
+    .testimonial-content { max-width: 60%; width: 60%; }
 }
 
 @media (max-width: 992px) {
-    .testimonial-track { gap: 15px; padding: 15px 30px; }
-    .testimonial-item { flex: 0 0 280px; height: 360px; border-radius: 12px; }
-    .testimonial-overlay { padding: 20px 15px; border-radius: 12px; }
-    .quote-icon { font-size: 35px; }
-    .testimonial-text { font-size: 12px; }
-    .author-info h4 { font-size: 10px; }
-    .nav-btn { width: 42px; height: 42px; font-size: 20px; }
+    .testimonial-text { font-size: 14px; }
+    .quote-icon { font-size: 50px; }
+    .author-info h4 { font-size: 18px; }
+    .author-info span { font-size: 14px; }
+    .carousel-container { height: 60vh; margin: 25px 0; }
+    .testimonial-content { max-width: 65%; width: 65%; }
 }
 
 @media (max-width: 768px) {
-    .testimonial-track { gap: 12px; padding: 12px 25px; }
-    .testimonial-item { flex: 0 0 260px; height: 340px; border-radius: 10px; }
-    .testimonial-overlay { padding: 18px 12px; border-radius: 10px; }
-    .quote-icon { font-size: 32px; }
-    .testimonial-text { font-size: 11px; line-height: 1.3; }
-    .author-info h4 { font-size: 9px; }
-    .nav-btn { width: 40px; height: 40px; font-size: 18px; }
+    .testimonial-carousel { padding: 15px; }
+    .carousel-container { height: 55vh; border-radius: 25px; margin: 20px 0; }
+    .testimonial-item { border-radius: 25px; }
+    .testimonial-overlay { padding: 50px 40px; border-radius: 25px; }
+    .testimonial-text { font-size: 13px; margin-bottom: 35px; }
+    .quote-icon { font-size: 45px; margin-bottom: 25px; }
+    .author-info h4 { font-size: 16px; margin-bottom: 10px; }
+    .author-info span { font-size: 13px; }
+    .nav-btn { width: 60px; height: 60px; font-size: 28px; }
+    .carousel-nav { padding: 0 40px; }
+    .carousel-dots { bottom: 25px; gap: 12px; padding: 8px 16px; }
+    .dot { width: 10px; height: 10px; }
+    .testimonial-content { max-width: 70%; width: 70%; }
+}
+
+@media (max-width: 576px) {
+    .carousel-container { height: 50vh; margin: 15px 0; }
+    .testimonial-content { max-width: 80%; width: 80%; }
 }
 
 @media (max-width: 480px) {
-    .testimonial-track { gap: 10px; padding: 10px 20px; }
-    .testimonial-item { flex: 0 0 240px; height: 320px; border-radius: 8px; }
-    .testimonial-overlay { padding: 15px 10px; border-radius: 8px; }
-    .quote-icon { font-size: 28px; }
-    .testimonial-text { font-size: 10px; line-height: 1.2; }
-    .author-info h4 { font-size: 8px; }
-    .nav-btn { width: 35px; height: 35px; font-size: 16px; }
-}
-
-@media (max-width: 360px) {
-    .testimonial-track { gap: 8px; padding: 8px 15px; }
-    .testimonial-item { flex: 0 0 220px; height: 300px; border-radius: 6px; }
-    .testimonial-overlay { padding: 12px 8px; border-radius: 6px; }
-    .quote-icon { font-size: 24px; }
-    .testimonial-text { font-size: 9px; line-height: 1.1; }
-    .author-info h4 { font-size: 7px; }
-    .nav-btn { width: 32px; height: 32px; font-size: 14px; }
+    .testimonial-carousel { padding: 10px; }
+    .carousel-container { height: 45vh; border-radius: 20px; margin: 10px 0; }
+    .testimonial-item { border-radius: 20px; }
+    .testimonial-overlay { padding: 30px 25px; border-radius: 20px; }
+    .testimonial-text { font-size: 12px; margin-bottom: 25px; }
+    .quote-icon { font-size: 35px; margin-bottom: 20px; }
+    .author-info h4 { font-size: 14px; margin-bottom: 8px; }
+    .author-info span { font-size: 11px; }
+    .nav-btn { width: 55px; height: 55px; font-size: 24px; }
+    .carousel-nav { padding: 0 30px; }
+    .carousel-dots { bottom: 20px; gap: 10px; padding: 6px 14px; }
+    .dot { width: 8px; height: 8px; }
+    .testimonial-content { max-width: 85%; width: 85%; }
 }
 </style>
 
@@ -370,24 +379,14 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentX = 0;
     let isDragging = false;
     
-    const getDimensions = () => {
-        const w = window.innerWidth;
-        if (w <= 360) return { itemWidth: 228, gap: 8 };
-        if (w <= 480) return { itemWidth: 250, gap: 10 };
-        if (w <= 768) return { itemWidth: 272, gap: 12 };
-        if (w <= 992) return { itemWidth: 295, gap: 15 };
-        if (w <= 1200) return { itemWidth: 318, gap: 18 };
-        return { itemWidth: 340, gap: 20 };
-    };
-    
     const updateCarousel = () => {
         if (isTransitioning) return;
         isTransitioning = true;
         
-        const dim = getDimensions();
-        const centerOffset = (container.offsetWidth - dim.itemWidth) / 2;
-        const translateValue = -(currentSlide * (dim.itemWidth + dim.gap)) + centerOffset;
-        
+        const containerWidth = container.offsetWidth;
+        const itemWidth = containerWidth - 40;
+        const gap = 40;
+        const translateValue = -currentSlide * (itemWidth + gap);
         track.style.transform = `translateX(${translateValue}px)`;
         
         items.forEach((item, index) => {
@@ -420,7 +419,7 @@ document.addEventListener('DOMContentLoaded', function() {
     };
     
     const startAutoPlay = () => {
-        autoPlayInterval = setInterval(nextSlide, 23000);
+        autoPlayInterval = setInterval(nextSlide, 15000);
     };
     
     const stopAutoPlay = () => clearInterval(autoPlayInterval);
@@ -449,11 +448,13 @@ document.addEventListener('DOMContentLoaded', function() {
         currentX = getEventX(e);
         
         const deltaX = currentX - startX;
-        const dim = getDimensions();
-        const centerOffset = (container.offsetWidth - dim.itemWidth) / 2;
-        const baseTranslate = -(currentSlide * (dim.itemWidth + dim.gap)) + centerOffset;
+        const containerWidth = container.offsetWidth;
+        const itemWidth = containerWidth - 40;
+        const gap = 40;
+        const baseTranslate = -currentSlide * (itemWidth + gap);
+        const dragOffset = deltaX * 0.3;
         
-        track.style.transform = `translateX(${baseTranslate + deltaX * 0.3}px)`;
+        track.style.transform = `translateX(${baseTranslate + dragOffset}px)`;
     };
     
     const handleEnd = (e) => {
@@ -461,7 +462,7 @@ document.addEventListener('DOMContentLoaded', function() {
         isDragging = false;
         
         const deltaX = currentX - startX;
-        const threshold = 60;
+        const threshold = container.offsetWidth * 0.15;
         
         track.style.transition = 'transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
         
@@ -479,19 +480,25 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(startAutoPlay, 1000);
     };
     
-    nextBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        nextSlide();
-        stopAutoPlay();
-        setTimeout(startAutoPlay, 2000);
-    });
+    if (nextBtn) {
+        nextBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            nextSlide();
+            stopAutoPlay();
+            setTimeout(startAutoPlay, 2000);
+        });
+    }
     
-    prevBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        prevSlide();
-        stopAutoPlay();
-        setTimeout(startAutoPlay, 2000);
-    });
+    if (prevBtn) {
+        prevBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            prevSlide();
+            stopAutoPlay();
+            setTimeout(startAutoPlay, 2000);
+        });
+    }
     
     items.forEach((item, index) => {
         item.addEventListener('click', (e) => {
@@ -507,19 +514,22 @@ document.addEventListener('DOMContentLoaded', function() {
     dots.forEach((dot, index) => {
         dot.addEventListener('click', (e) => {
             e.preventDefault();
+            e.stopPropagation();
             goToSlide(index);
             stopAutoPlay();
             setTimeout(startAutoPlay, 2000);
         });
     });
     
-    container.addEventListener('touchstart', handleStart, { passive: false });
-    container.addEventListener('touchmove', handleMove, { passive: false });
-    container.addEventListener('touchend', handleEnd, { passive: false });
-    container.addEventListener('mousedown', handleStart);
-    container.addEventListener('contextmenu', e => e.preventDefault());
+    if (container) {
+        container.addEventListener('touchstart', handleStart, { passive: false });
+        container.addEventListener('touchmove', handleMove, { passive: false });
+        container.addEventListener('touchend', handleEnd, { passive: false });
+        container.addEventListener('mousedown', handleStart);
+        container.addEventListener('contextmenu', e => e.preventDefault());
+    }
     
-    if (window.innerWidth > 768) {
+    if (window.innerWidth > 768 && container) {
         container.addEventListener('mouseenter', stopAutoPlay);
         container.addEventListener('mouseleave', startAutoPlay);
     }
@@ -534,11 +544,21 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 250);
     });
     
+    window.addEventListener('orientationchange', () => {
+        setTimeout(() => {
+            updateCarousel();
+            stopAutoPlay();
+            setTimeout(startAutoPlay, 1000);
+        }, 300);
+    });
+    
     document.addEventListener('visibilitychange', () => {
         document.hidden ? stopAutoPlay() : startAutoPlay();
     });
     
-    updateCarousel();
-    startAutoPlay();
+    if (items.length > 0 && track && container) {
+        updateCarousel();
+        startAutoPlay();
+    }
 });
 </script>
