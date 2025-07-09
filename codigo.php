@@ -114,7 +114,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 .testimonial-carousel {
-    max-width: 1600px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 20px;
     font-family: 'Poppins', sans-serif;
@@ -123,7 +123,7 @@
 .carousel-container {
     position: relative;
     overflow: hidden;
-    border-radius: 25px;
+    border-radius: 15px;
     cursor: grab;
     user-select: none;
 }
@@ -137,13 +137,13 @@
     transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     will-change: transform;
     gap: 20px;
-    padding: 20px;
+    padding: 20px 50px;
 }
 
 .testimonial-item {
-    flex: 0 0 840px;
-    height: 600px;
-    border-radius: 20px;
+    flex: 0 0 320px;
+    height: 400px;
+    border-radius: 15px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -151,25 +151,13 @@
     cursor: pointer;
     transform: scale(0.85);
     opacity: 0.7;
-    filter: brightness(0.7);
     transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .testimonial-item.active {
     transform: scale(1);
     opacity: 1;
-    filter: brightness(1);
     z-index: 2;
-}
-
-.testimonial-item:hover {
-    transform: scale(0.9);
-    opacity: 0.9;
-    filter: brightness(0.9);
-}
-
-.testimonial-item.active:hover {
-    transform: scale(1.02);
 }
 
 .testimonial-overlay {
@@ -177,10 +165,10 @@
     inset: 0;
     background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 100%);
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
-    padding: 40px 30px;
-    border-radius: 20px;
+    padding: 25px 20px;
+    border-radius: 15px;
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -201,53 +189,46 @@
 }
 
 .quote-icon {
-    font-size: 60px;
+    font-size: 40px;
     color: rgba(255, 255, 255, 0.4);
     line-height: 1;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    text-align: left;
 }
 
 .testimonial-text {
-    font-size: 18px;
-    line-height: 1.6;
+    font-size: 14px;
+    line-height: 1.4;
     color: #fff;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     font-style: italic;
     text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-    font-family: 'Poppins', sans-serif;
     font-weight: 400;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .author-info {
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .author-info h4 {
-    margin: 0 0 8px 0;
+    margin: 0 0 5px 0;
     color: #fff;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
     text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-    font-family: 'Poppins', sans-serif;
 }
 
 .author-info span {
     color: #fff;
-    font-size: 14px;
+    font-size: 10px;
     font-weight: 600;
     text-shadow: 0 1px 2px rgba(0,0,0,0.5);
-    font-family: 'Poppins', sans-serif;
-}
-
-.testimonial-content h3 {
-    color: #fff;
-    font-size: 20px;
-    margin-bottom: 25px;
-    font-weight: 700;
-    font-family: 'Poppins', sans-serif;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
 .carousel-nav {
@@ -257,7 +238,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 0 30px;
+    padding: 0 20px;
     pointer-events: none;
     z-index: 10;
 }
@@ -265,10 +246,10 @@
 .nav-btn {
     background: rgba(255,255,255,0.9);
     border: none;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    font-size: 28px;
+    font-size: 24px;
     cursor: pointer;
     box-shadow: 0 5px 20px rgba(0,0,0,0.2);
     transition: all 0.3s ease;
@@ -289,18 +270,18 @@
 
 .carousel-dots {
     position: absolute;
-    bottom: 30px;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
-    gap: 12px;
+    gap: 10px;
     z-index: 10;
 }
 
 .dot {
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.5);
     cursor: pointer;
@@ -321,76 +302,54 @@
 
 /* Responsive Design */
 @media (max-width: 1200px) {
-    .testimonial-carousel { padding: 18px; }
-    .testimonial-track { gap: 18px; padding: 18px; }
-    .testimonial-item { flex: 0 0 730px; height: 520px; }
-    .testimonial-overlay { padding: 35px 25px; }
-    .quote-icon { font-size: 55px; }
-    .testimonial-text { font-size: 17px; }
-    .author-info h4 { font-size: 15px; }
-    .author-info span { font-size: 13px; }
-    .nav-btn { width: 55px; height: 55px; font-size: 26px; }
-    .carousel-nav { padding: 0 25px; }
+    .testimonial-track { gap: 18px; padding: 18px 40px; }
+    .testimonial-item { flex: 0 0 300px; height: 380px; }
+    .testimonial-overlay { padding: 22px 18px; }
+    .quote-icon { font-size: 38px; }
+    .testimonial-text { font-size: 13px; }
+    .author-info h4 { font-size: 11px; }
+    .author-info span { font-size: 9px; }
+    .nav-btn { width: 45px; height: 45px; font-size: 22px; }
 }
 
 @media (max-width: 992px) {
-    .testimonial-carousel { padding: 16px; }
-    .testimonial-track { gap: 16px; padding: 16px; }
-    .testimonial-item { flex: 0 0 656px; height: 480px; border-radius: 18px; }
-    .testimonial-overlay { padding: 32px 22px; border-radius: 18px; }
-    .quote-icon { font-size: 50px; }
-    .testimonial-text { font-size: 16px; }
-    .author-info h4 { font-size: 14px; }
-    .author-info span { font-size: 12px; }
-    .nav-btn { width: 52px; height: 52px; font-size: 24px; }
-    .carousel-nav { padding: 0 22px; }
-    .carousel-dots { bottom: 25px; gap: 10px; }
-    .dot { width: 11px; height: 11px; }
+    .testimonial-track { gap: 15px; padding: 15px 30px; }
+    .testimonial-item { flex: 0 0 280px; height: 360px; border-radius: 12px; }
+    .testimonial-overlay { padding: 20px 15px; border-radius: 12px; }
+    .quote-icon { font-size: 35px; }
+    .testimonial-text { font-size: 12px; }
+    .author-info h4 { font-size: 10px; }
+    .nav-btn { width: 42px; height: 42px; font-size: 20px; }
 }
 
 @media (max-width: 768px) {
-    .testimonial-carousel { padding: 15px; }
-    .testimonial-track { gap: 15px; padding: 15px; }
-    .testimonial-item { flex: 0 0 575px; height: 420px; border-radius: 16px; }
-    .testimonial-overlay { padding: 28px 18px; border-radius: 16px; }
-    .quote-icon { font-size: 45px; }
-    .testimonial-text { font-size: 15px; line-height: 1.5; }
-    .author-info h4 { font-size: 13px; }
-    .author-info span { font-size: 11px; }
-    .nav-btn { width: 48px; height: 48px; font-size: 22px; }
-    .carousel-nav { padding: 0 20px; }
-    .carousel-dots { bottom: 22px; gap: 9px; }
-    .dot { width: 10px; height: 10px; }
+    .testimonial-track { gap: 12px; padding: 12px 25px; }
+    .testimonial-item { flex: 0 0 260px; height: 340px; border-radius: 10px; }
+    .testimonial-overlay { padding: 18px 12px; border-radius: 10px; }
+    .quote-icon { font-size: 32px; }
+    .testimonial-text { font-size: 11px; line-height: 1.3; }
+    .author-info h4 { font-size: 9px; }
+    .nav-btn { width: 40px; height: 40px; font-size: 18px; }
 }
 
 @media (max-width: 480px) {
-    .testimonial-carousel { padding: 12px; }
-    .testimonial-track { gap: 12px; padding: 12px; }
-    .testimonial-item { flex: 0 0 492px; height: 360px; border-radius: 14px; }
-    .testimonial-overlay { padding: 24px 15px; border-radius: 14px; }
-    .quote-icon { font-size: 38px; }
-    .testimonial-text { font-size: 13px; line-height: 1.4; }
-    .author-info h4 { font-size: 12px; letter-spacing: 0.8px; }
-    .author-info span { font-size: 10px; }
-    .nav-btn { width: 44px; height: 44px; font-size: 20px; }
-    .carousel-nav { padding: 0 18px; }
-    .carousel-dots { bottom: 20px; gap: 8px; }
-    .dot { width: 9px; height: 9px; }
+    .testimonial-track { gap: 10px; padding: 10px 20px; }
+    .testimonial-item { flex: 0 0 240px; height: 320px; border-radius: 8px; }
+    .testimonial-overlay { padding: 15px 10px; border-radius: 8px; }
+    .quote-icon { font-size: 28px; }
+    .testimonial-text { font-size: 10px; line-height: 1.2; }
+    .author-info h4 { font-size: 8px; }
+    .nav-btn { width: 35px; height: 35px; font-size: 16px; }
 }
 
 @media (max-width: 360px) {
-    .testimonial-carousel { padding: 10px; }
-    .testimonial-track { gap: 10px; padding: 10px; }
-    .testimonial-item { flex: 0 0 410px; height: 320px; border-radius: 12px; }
-    .testimonial-overlay { padding: 20px 12px; border-radius: 12px; }
-    .quote-icon { font-size: 32px; }
-    .testimonial-text { font-size: 12px; line-height: 1.3; }
-    .author-info h4 { font-size: 11px; letter-spacing: 0.5px; }
-    .author-info span { font-size: 9px; }
-    .nav-btn { width: 40px; height: 40px; font-size: 18px; }
-    .carousel-nav { padding: 0 15px; }
-    .carousel-dots { bottom: 18px; gap: 6px; }
-    .dot { width: 8px; height: 8px; }
+    .testimonial-track { gap: 8px; padding: 8px 15px; }
+    .testimonial-item { flex: 0 0 220px; height: 300px; border-radius: 6px; }
+    .testimonial-overlay { padding: 12px 8px; border-radius: 6px; }
+    .quote-icon { font-size: 24px; }
+    .testimonial-text { font-size: 9px; line-height: 1.1; }
+    .author-info h4 { font-size: 7px; }
+    .nav-btn { width: 32px; height: 32px; font-size: 14px; }
 }
 </style>
 
@@ -411,15 +370,14 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentX = 0;
     let isDragging = false;
     
-    // Responsive dimensions
     const getDimensions = () => {
         const w = window.innerWidth;
-        if (w <= 360) return { itemWidth: 420, gap: 10 };
-        if (w <= 480) return { itemWidth: 504, gap: 12 };
-        if (w <= 768) return { itemWidth: 590, gap: 15 };
-        if (w <= 992) return { itemWidth: 672, gap: 16 };
-        if (w <= 1200) return { itemWidth: 748, gap: 18 };
-        return { itemWidth: 860, gap: 20 };
+        if (w <= 360) return { itemWidth: 228, gap: 8 };
+        if (w <= 480) return { itemWidth: 250, gap: 10 };
+        if (w <= 768) return { itemWidth: 272, gap: 12 };
+        if (w <= 992) return { itemWidth: 295, gap: 15 };
+        if (w <= 1200) return { itemWidth: 318, gap: 18 };
+        return { itemWidth: 340, gap: 20 };
     };
     
     const updateCarousel = () => {
@@ -427,8 +385,8 @@ document.addEventListener('DOMContentLoaded', function() {
         isTransitioning = true;
         
         const dim = getDimensions();
-        const centerOffset = (container.offsetWidth - (dim.itemWidth - dim.gap)) / 2;
-        const translateValue = -(currentSlide * dim.itemWidth) + centerOffset;
+        const centerOffset = (container.offsetWidth - dim.itemWidth) / 2;
+        const translateValue = -(currentSlide * (dim.itemWidth + dim.gap)) + centerOffset;
         
         track.style.transform = `translateX(${translateValue}px)`;
         
@@ -462,8 +420,7 @@ document.addEventListener('DOMContentLoaded', function() {
     };
     
     const startAutoPlay = () => {
-        const speed = window.innerWidth <= 768 ? 7000 : 6000;
-        autoPlayInterval = setInterval(nextSlide, speed);
+        autoPlayInterval = setInterval(nextSlide, 23000);
     };
     
     const stopAutoPlay = () => clearInterval(autoPlayInterval);
@@ -493,8 +450,8 @@ document.addEventListener('DOMContentLoaded', function() {
         
         const deltaX = currentX - startX;
         const dim = getDimensions();
-        const centerOffset = (container.offsetWidth - (dim.itemWidth - dim.gap)) / 2;
-        const baseTranslate = -(currentSlide * dim.itemWidth) + centerOffset;
+        const centerOffset = (container.offsetWidth - dim.itemWidth) / 2;
+        const baseTranslate = -(currentSlide * (dim.itemWidth + dim.gap)) + centerOffset;
         
         track.style.transform = `translateX(${baseTranslate + deltaX * 0.3}px)`;
     };
@@ -504,7 +461,7 @@ document.addEventListener('DOMContentLoaded', function() {
         isDragging = false;
         
         const deltaX = currentX - startX;
-        const threshold = window.innerWidth <= 480 ? 60 : window.innerWidth <= 768 ? 70 : 80;
+        const threshold = 60;
         
         track.style.transition = 'transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
         
@@ -522,7 +479,6 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(startAutoPlay, 1000);
     };
     
-    // Event listeners
     nextBtn.addEventListener('click', (e) => {
         e.preventDefault();
         nextSlide();
@@ -546,16 +502,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 setTimeout(startAutoPlay, 2000);
             }
         });
-        
-        item.addEventListener('touchstart', () => {
-            item.style.transform = item.classList.contains('active') ? 'scale(1.01)' : 'scale(0.88)';
-        });
-        
-        item.addEventListener('touchend', () => {
-            setTimeout(() => {
-                item.style.transform = item.classList.contains('active') ? 'scale(1)' : 'scale(0.85)';
-            }, 100);
-        });
     });
     
     dots.forEach((dot, index) => {
@@ -567,39 +513,31 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Touch and mouse events
     container.addEventListener('touchstart', handleStart, { passive: false });
     container.addEventListener('touchmove', handleMove, { passive: false });
     container.addEventListener('touchend', handleEnd, { passive: false });
     container.addEventListener('mousedown', handleStart);
     container.addEventListener('contextmenu', e => e.preventDefault());
     
-    // Hover pause (desktop only)
     if (window.innerWidth > 768) {
         container.addEventListener('mouseenter', stopAutoPlay);
         container.addEventListener('mouseleave', startAutoPlay);
     }
     
-    // Resize and orientation handling
     let resizeTimeout;
-    const handleResize = () => {
+    window.addEventListener('resize', () => {
         clearTimeout(resizeTimeout);
         resizeTimeout = setTimeout(() => {
             updateCarousel();
             stopAutoPlay();
             setTimeout(startAutoPlay, 1000);
         }, 250);
-    };
+    });
     
-    window.addEventListener('resize', handleResize);
-    window.addEventListener('orientationchange', () => setTimeout(handleResize, 300));
-    
-    // Visibility handling
     document.addEventListener('visibilitychange', () => {
         document.hidden ? stopAutoPlay() : startAutoPlay();
     });
     
-    // Initialize
     updateCarousel();
     startAutoPlay();
 });
