@@ -123,9 +123,9 @@ html, body {
 
 .testimonial-carousel {
     width: 100%;
-    max-width: 1440px;
+    max-width: 2000px;
     margin: 0 auto;
-    padding: 0;
+    padding: 20px;
     font-family: 'Poppins', sans-serif;
     position: relative;
     display: flex;
@@ -137,13 +137,13 @@ html, body {
 .carousel-container {
     position: relative;
     overflow: hidden;
-    border-radius: 20px;
+    border-radius: 30px;
     width: 100%;
     height: 80vh;
     min-height: 500px;
     cursor: grab;
     user-select: none;
-    margin: 0;
+    margin: 40px auto;
     z-index: 1;
 }
 
@@ -163,7 +163,7 @@ html, body {
     .testimonial-item { 
         flex: 0 0 calc(100% - 40px);
         height: 100%;
-        border-radius: 20px;
+        border-radius: 30px;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -187,7 +187,7 @@ html, body {
     align-items: center;
     justify-content: flex-start;
     padding: 80px 60px;
-    border-radius: 20px;
+    border-radius: 30px;
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -351,7 +351,7 @@ html, body {
     .testimonial-text { font-size: 15px; }
     .author-info h4 { font-size: 20px; }
     .author-info span { font-size: 16px; }
-    .carousel-container { height: 70vh; }
+    .carousel-container { height: 70vh; margin: 30px 0; }
     .testimonial-content { max-width: 60%; width: 60%; }
 }
 
@@ -359,7 +359,7 @@ html, body {
     .testimonial-text { font-size: 14px; }
     .author-info h4 { font-size: 18px; }
     .author-info span { font-size: 14px; }
-    .carousel-container { height: 60vh; }
+    .carousel-container { height: 60vh; margin: 25px 0; }
     .testimonial-content { max-width: 65%; width: 65%; }
 }
 
