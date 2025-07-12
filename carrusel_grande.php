@@ -1,7 +1,7 @@
 <div class="testimonial-carousel">
     <div class="carousel-container">
         <div class="testimonial-track">
-            <div class="testimonial-item active" data-index="0" style="background-image: url('https://i.ibb.co/CK5mYxRG/David-Mu-oz-2.png');">
+            <div class="testimonial-item active" data-index="0" style="background-image: url('https://i.ibb.co/JjMVZhKs/David-Mu-oz.png');">
                 <div class="testimonial-overlay">
                     <div class="testimonial-content">
                         <p class="testimonial-text">"Lo más valioso para mí fue entender que si quiero crecer, debo dedicar tiempo real al área de ventas. La mentoría me ayudó a estructurar eso, que era justo lo que no tenía claro ni desarrollado."</p>
@@ -12,7 +12,7 @@
                     </div>
                 </div>
             </div>
-            <div class="testimonial-item holger-slide" data-index="1" style="background-image: url('https://i.ibb.co/SX50k3gg/Holger-Nu-ez-2.png');">
+            <div class="testimonial-item holger-slide" data-index="1" style="background-image: url('https://i.ibb.co/MxpfgT3Z/Holger-Nu-ez.png');">
                 <div class="testimonial-overlay">
                     <div class="testimonial-content">
                         <p class="testimonial-text">"Bobby destaca por su experiencia, pero sobre todo por la forma cordial y clara con la que transmite cada idea. Se toma el tiempo para explicar sin apuro, y eso marca una gran diferencia en el aprendizaje."</p>
@@ -23,7 +23,7 @@
                     </div>
                 </div>
             </div>
-            <div class="testimonial-item" data-index="2" style="background-image: url('https://i.ibb.co/psHN0Mw/Marcao-Baeza-2.png');">
+            <div class="testimonial-item" data-index="2" style="background-image: url('https://i.ibb.co/4wsyrmPt/Marcao-Baeza.png');">
                 <div class="testimonial-overlay">
                     <div class="testimonial-content">
                         <p class="testimonial-text">"Bobby se involucra de verdad en cada problema como si fuera suyo, buscando soluciones desde su experiencia real. Me ayudó a alinear toda la organización para lograr una estrategia comercial efectiva."</p>
@@ -34,7 +34,7 @@
                     </div>
                 </div>
             </div>
-            <div class="testimonial-item" data-index="3" style="background-image: url('https://i.ibb.co/BVKQw5Lj/Daniel-Riffo-2.png');">
+            <div class="testimonial-item" data-index="3" style="background-image: url('https://i.ibb.co/991d3vNW/Daniel-Riffo.png');">
                 <div class="testimonial-overlay">
                     <div class="testimonial-content">
                         <p class="testimonial-text">"Bobby habla desde la experiencia, no desde la teoría. Entiende rápido los desafíos reales del negocio y adapta su enfoque con precisión. Es como tener a alguien del equipo que quiere verte crecer."</p>
@@ -45,7 +45,7 @@
                     </div>
                 </div>
             </div>
-            <div class="testimonial-item" data-index="4" style="background-image: url('https://i.ibb.co/whMZJPxt/Fernando-Marica-2.png');">
+            <div class="testimonial-item" data-index="4" style="background-image: url('https://i.ibb.co/Fk5T2yY9/Fernando-Marica.png');">
                 <div class="testimonial-overlay">
                     <div class="testimonial-content">
                         <p class="testimonial-text">"Las estrategias que entrega Bobby, si se aplican bien, pueden duplicar las ventas de cualquier negocio. Son herramientas concretas, aplicables desde el primer día, y justifican por completo la inversión."</p>
@@ -56,24 +56,26 @@
                     </div>
                 </div>
             </div>
-            <div class="testimonial-item" data-index="5" style="background-image: url('https://i.ibb.co/KcQBZW48/Santiago-Piedrahita-2.png');">
+            <div class="testimonial-item" data-index="5" style="background-image: url('https://i.ibb.co/fYxzXXgd/Santiago-Piedrahita.png');">
                 <div class="testimonial-overlay">
                     <div class="testimonial-content">
                         <p class="testimonial-text">"En solo una sesión, Bobby me enseñó a sistematizar las ventas y crear nuevos canales. Fue concreto, directo y transformador. Toda mi vida empresarial busqué a alguien así… y ya me había dado por vencido."</p>
                         <div class="author-info">
                             <h4>SANTIAGO PIEDRAHITA</h4>
-                            <span>Gerente General Balance Vida OTEC - Colombia</span>
+                            <span class="posicion-autor">
+  Gerente General Orquideas Plantopia SAS - Colombia
+</span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="testimonial-item" data-index="6" style="background-image: url('https://i.ibb.co/zhTFPFTg/Servigio-Puentes-2.png');">
+            <div class="testimonial-item" data-index="6" style="background-image: url('https://i.ibb.co/whW2X2pm/Sergio-Puentes.png');">
                 <div class="testimonial-overlay">
                     <div class="testimonial-content">
                         <p class="testimonial-text">"Con Bobby trabajamos desde cómo hablar y vestirme hasta generar conversaciones estratégicas. Gracias a eso, hoy tengo más presencia, más seguridad y una nueva forma de vender."</p>
                         <div class="author-info">
                             <h4>SERGIO PUENTES</h4>
-                            <span>Gerente General Balance Vida OTEC - Colombia</span>
+                            <span>Director de Cuentas Claves Ciberseguridad & Acoount Manager ARKAVIA - Chile</span>
                         </div>
                     </div>
                 </div>
@@ -105,7 +107,7 @@
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-*{box-sizing:border-box;margin:0;padding:0;}*:hover{background:inherit !important;color:inherit !important;transform:none !important;box-shadow:inherit !important;border:inherit !important;opacity:inherit !important;filter:none !important;}
+*{box-sizing:border-box;margin:0;padding:0;}
 html,body{margin:0;padding:0;overflow-x:hidden;width:100%;height:100%;box-sizing:border-box;}
 .testimonial-carousel{width:100%;max-width:1440px;margin:0 auto;padding:0;font-family:'Poppins',sans-serif;position:relative;display:flex;align-items:center;justify-content:center;z-index:1;}
 .carousel-container{position:relative;overflow:hidden;border-radius:20px;width:100%;height:85vh;min-height:500px;cursor:grab;user-select:none;margin:0;z-index:1;}
@@ -124,13 +126,13 @@ html,body{margin:0;padding:0;overflow-x:hidden;width:100%;height:100%;box-sizing
 .author-info span{color:#fff;font-size:20px;font-weight:600;text-shadow:2px 2px 4px rgba(0,0,0,0.8);}
 .carousel-nav{position:absolute;top:50%;transform:translateY(-50%);width:100%;display:flex;justify-content:space-between;padding:0 40px 0 15px;left:0;pointer-events:none;z-index:1000;}
 .nav-btn{background:rgba(255,255,255,0.4);border:none;width:25px;height:25px;border-radius:50%;cursor:pointer;box-shadow:0 1px 6px rgba(0,0,0,0.1);transition:all 0.3s ease;pointer-events:auto;color:#333;display:flex;align-items:center;justify-content:center;z-index:1001;position:relative;touch-action:manipulation;-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
-
+.nav-btn:hover{background:rgba(255,255,255,0.95);color:#667eea;transform:scale(1.1);box-shadow:0 4px 15px rgba(102,126,234,0.3);}
 .nav-btn svg{width:10px;height:10px;}
-
+@media (hover:none){.nav-btn:hover{background:rgba(255,255,255,0.95);color:#333;transform:scale(1.05);box-shadow:0 4px 15px rgba(102,126,234,0.2);}}
 .carousel-dots{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);display:flex;justify-content:center;gap:15px;z-index:1000;background:rgba(0,0,0,0.3);padding:10px 20px;border-radius:25px;backdrop-filter:blur(10px);}
 .dot{width:12px;height:12px;border-radius:50%;background:rgba(255,255,255,0.4);cursor:pointer;transition:all 0.3s ease;border:2px solid rgba(255,255,255,0.6);z-index:1001;position:relative;touch-action:manipulation;-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
 .dot.active{background:#fff;transform:scale(1.5);box-shadow:0 2px 8px rgba(0,0,0,0.4);border:2px solid #fff;}
-
+.dot:hover{background:rgba(255,255,255,0.8);transform:scale(1.2);border:2px solid rgba(255,255,255,0.9);}
 @media (max-width:1400px){.testimonial-text{font-size:16px;}.author-info h4{font-size:22px;}.author-info span{font-size:18px;}.testimonial-content{max-width:55%;width:55%;}.testimonial-item{background-position:center 15%;}}
 @media (max-width:1366px) and (max-height:768px){.carousel-container{height:95vh;}.testimonial-item{background-position:center 10%;}.testimonial-overlay{padding:30px 25px;}.testimonial-text{font-size:13px;}.author-info h4{font-size:17px;}.author-info span{font-size:14px;}.testimonial-content{max-width:42%;width:42%;}}
 @media (max-width:1366px) and (min-height:769px){.carousel-container{height:85vh;}.testimonial-item{background-position:center 12%;}.testimonial-overlay{padding:40px 35px;}.testimonial-text{font-size:15px;}.author-info h4{font-size:19px;}.author-info span{font-size:16px;}.testimonial-content{max-width:48%;width:48%;}}
