@@ -1,7 +1,7 @@
 <div id="aboutContainer">
-    <div id="aboutImageContainer" data-video="https://vimeo.com/726421994">
+    <div id="aboutImageContainer" data-video="https://vimeo.com/1100899412">
         <div id="aboutImage">
-            <iframe id="hoverVideo" src="https://player.vimeo.com/video/726421994?autoplay=1&loop=1&muted=1&title=0&byline=0&portrait=0&controls=0&background=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            <iframe id="hoverVideo" src="https://player.vimeo.com/video/1100899412?autoplay=1&loop=1&muted=1&title=0&byline=0&portrait=0&controls=0&background=1&autopause=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
             <div id="videoOverlay">
                 <div id="playButton">
                     <span>▶ Mirar</span>
@@ -30,24 +30,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 #aboutContainer{display:flex;align-items:center;justify-content:center;min-height:80vh;padding:50px;gap:80px;font-family:'Poppins',sans-serif;background-color:#000;color:#fff;line-height:1.6;}
 #aboutImageContainer{flex:1;max-width:500px;position:relative;aspect-ratio:16/9;border-radius:10px;overflow:hidden;cursor:pointer;}
-#aboutImage{width:100%;height:100%;background-image:url('https://i.ibb.co/JjMVZhKs/David-Mu-oz.png');background-size:cover;background-position:center;background-repeat:no-repeat;border-radius:10px;position:relative;}
-#hoverVideo{display:none;position:absolute;top:0;left:0;width:100%;height:100%;border-radius:10px;border:none;}
-#videoOverlay{position:absolute;inset:0;background:rgba(0,0,0,0.5);display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;border-radius:10px;opacity:0;transition:opacity 0.3s ease;padding:15px;}
+#aboutImage{width:100%;height:100%;position:relative;}
+#hoverVideo{position:absolute;top:0;left:0;width:100%;height:100%;border-radius:10px;border:none;}
+#videoOverlay{position:absolute;inset:0;background:rgba(0,0,0,0.3);display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;border-radius:10px;opacity:0;transition:opacity 0.3s ease;padding:15px;}
 #aboutImageContainer:hover #videoOverlay{opacity:1;}
-#playButton{background:rgba(255,255,255,0.9);color:#333;padding:8px 16px;border-radius:20px;font-size:14px;font-weight:600;transition:all 0.3s ease;cursor:pointer;display:inline-flex;align-items:center;gap:5px;}
+#playButton{background:rgba(255,255,255,0.7);color:#333;padding:8px 16px;border-radius:20px;font-size:14px;font-weight:600;transition:all 0.3s;cursor:pointer;display:inline-flex;align-items:center;gap:5px;opacity:1 !important;}
 #aboutImageContainer:hover #playButton{background:rgba(255,255,255,1);transform:scale(1.05);}
 #aboutContent{flex:1;max-width:600px;}
 #aboutTitle{font-size:48px;font-weight:bold;margin-bottom:30px;color:#fff;text-transform:uppercase;letter-spacing:2px;}
 #aboutText{font-size:18px;line-height:1.8;color:#ddd;text-align:justify;}
-#videoModal{display:none;position:fixed;z-index:10000;left:0;top:0;width:100%;height:100%;background-color:rgba(0,0,0,0.9);backdrop-filter:blur(5px);}
-#modalContent{position:relative;margin:5% auto;width:90%;max-width:900px;height:80vh;background:transparent;}
-#closeBtn{position:absolute;top:-40px;right:0;color:white;font-size:35px;font-weight:bold;cursor:pointer;z-index:10001;}
+#videoModal{display:none;position:fixed;z-index:2147483647;left:0;top:0;width:100%;height:100%;background-color:rgba(0,0,0,0.95);backdrop-filter:blur(10px);}
+#modalContent{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80vw;max-width:1000px;height:auto;aspect-ratio:16/9;max-height:80vh;background:transparent;z-index:2147483647;}
+#closeBtn{position:absolute;top:-50px;right:0;color:white;font-size:40px;font-weight:bold;cursor:pointer;z-index:2147483647;transition:opacity 0.3s;}
 #closeBtn:hover{opacity:0.7;}
-#videoWrapper{width:100%;height:100%;position:relative;}
-#videoWrapper iframe{width:100%;height:100%;border-radius:10px;}
-@media (max-width:1024px){#aboutContainer{flex-direction:column;gap:40px;padding:30px;}#aboutTitle{font-size:36px;text-align:center;}#aboutText{font-size:16px;}}
-@media (max-width:768px){#aboutContainer{padding:20px;}#aboutTitle{font-size:28px;}#aboutText{font-size:14px;}#modalContent{width:95%;height:70vh;margin:10% auto;}#playButton{font-size:12px;padding:6px 12px;}}
-@media (max-width:480px){#modalContent{width:98%;height:60vh;margin:15% auto;}#playButton{font-size:11px;padding:5px 10px;}}
+#videoWrapper{width:100%;height:100%;position:relative;z-index:2147483647;}
+#videoWrapper iframe{width:100%;height:100%;border-radius:15px;border:none;}
+#videoOverlay{opacity:1 !important;}
+#playButton{opacity:1 !important;}
+#aboutImageContainer:hover #videoOverlay{opacity:1 !important;}
+#videoOverlay{background:rgba(0,0,0,0.25) !important;}
+@media (max-width:1024px){#aboutContainer{flex-direction:column;gap:40px;padding:30px;}#aboutTitle{font-size:36px;text-align:center;}#aboutText{font-size:16px;}#aboutImageContainer{max-width:100%;order:2;}#aboutContent{order:1;}#modalContent{width:90vw;max-height:70vh;}}
+@media (max-width:768px){#aboutContainer{flex-direction:column;gap:30px;padding:20px;}#aboutContent{order:1;}#aboutImageContainer{order:2;width:100%;max-width:100%;aspect-ratio:16/9;}#aboutTitle{font-size:28px;}#aboutText{font-size:14px;}#modalContent{width:95vw;max-height:60vh;}#playButton{font-size:15px;padding:10px 20px;}}
+@media (max-width:480px){#aboutContainer{padding:15px;gap:20px;min-height:70vh;}#aboutContent{order:1;}#aboutImageContainer{order:2;width:100%;max-width:100%;aspect-ratio:16/9;}#aboutTitle{font-size:24px;margin-bottom:20px;}#aboutText{font-size:13px;line-height:1.6;}#modalContent{width:98vw;max-height:50vh;}#playButton{font-size:12px;padding:8px 15px;}}
+@media (max-width:360px){#aboutContainer{padding:10px;}#aboutTitle{font-size:20px;}#aboutText{font-size:12px;}#playButton{font-size:10px;padding:4px 8px;}}
 </style>
 
 <script>
@@ -76,14 +81,6 @@ document.addEventListener('DOMContentLoaded',function(){
         e.preventDefault();
         const videoUrl=aboutImageContainer.getAttribute('data-video');
         openVideoModal(videoUrl);
-    });
-    
-    aboutImageContainer.addEventListener('mouseenter',()=>{
-        hoverVideo.style.display='block';
-    });
-    
-    aboutImageContainer.addEventListener('mouseleave',()=>{
-        hoverVideo.style.display='none';
     });
     
     closeBtn.addEventListener('click',closeVideoModal);
