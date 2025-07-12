@@ -34,8 +34,9 @@
 #hoverVideo{position:absolute;top:0;left:0;width:100%;height:100%;border-radius:10px;border:none;}
 #videoOverlay{position:absolute;inset:0;background:rgba(0,0,0,0.3);display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;border-radius:10px;opacity:0;transition:opacity 0.3s ease;padding:15px;}
 #aboutImageContainer:hover #videoOverlay{opacity:1;}
-#playButton{background:rgba(255,255,255,0.7);color:#333;padding:8px 16px;border-radius:20px;font-size:14px;font-weight:600;transition:all 0.3s;cursor:pointer;display:inline-flex;align-items:center;gap:5px;opacity:1 !important;}
-#aboutImageContainer:hover #playButton{background:rgba(255,255,255,1);transform:scale(1.05);}
+#playButton{background:rgba(255,255,255,0.45)!important;color:#111!important;font-size:11px!important;padding:4px 9px!important;border-radius:30px!important;}
+#playButton span{color:#111!important;font-size:13px!important;}
+#playButton span::first-letter{color:#111!important;}
 #aboutContent{flex:1;max-width:600px;}
 #aboutTitle{font-size:48px;font-weight:bold;margin-bottom:30px;color:#fff;text-transform:uppercase;letter-spacing:2px;}
 #aboutText{font-size:18px;line-height:1.8;color:#ddd;text-align:justify;}
@@ -48,7 +49,7 @@
 #videoOverlay{opacity:1 !important;}
 #playButton{opacity:1 !important;}
 #aboutImageContainer:hover #videoOverlay{opacity:1 !important;}
-#videoOverlay{background:rgba(0,0,0,0.25) !important;}
+#videoOverlay{background:rgba(0,0,0,0.08)!important;}
 @media (max-width:1024px){#aboutContainer{flex-direction:column;gap:40px;padding:30px;}#aboutTitle{font-size:36px;text-align:center;}#aboutText{font-size:16px;}#aboutImageContainer{max-width:100%;order:2;}#aboutContent{order:1;}#modalContent{width:90vw;max-height:70vh;}}
 @media (max-width:768px){#aboutContainer{flex-direction:column;gap:30px;padding:20px;}#aboutContent{order:1;}#aboutImageContainer{order:2;width:100%;max-width:100%;aspect-ratio:16/9;}#aboutTitle{font-size:28px;}#aboutText{font-size:14px;}#modalContent{width:95vw;max-height:60vh;}#playButton{font-size:15px;padding:10px 20px;}}
 @media (max-width:480px){#aboutContainer{padding:15px;gap:20px;min-height:70vh;}#aboutContent{order:1;}#aboutImageContainer{order:2;width:100%;max-width:100%;aspect-ratio:16/9;}#aboutTitle{font-size:24px;margin-bottom:20px;}#aboutText{font-size:13px;line-height:1.6;}#modalContent{width:98vw;max-height:50vh;}#playButton{font-size:12px;padding:8px 15px;}}
@@ -58,43 +59,36 @@
 <script>
 document.addEventListener('DOMContentLoaded',function(){
     const aboutImageContainer=document.getElementById('aboutImageContainer');
-    const hoverVideo=document.getElementById('hoverVideo');
     const modal=document.getElementById('videoModal');
     const videoFrame=document.getElementById('videoFrame');
     const closeBtn=document.getElementById('closeBtn');
-    
+    let lastVideoUrl='';
     const openVideoModal=(videoUrl)=>{
+        if(modal.style.display==='block')return;
+        lastVideoUrl=videoUrl;
         const vimeoId=videoUrl.split('/').pop();
         const embedUrl=`https://player.vimeo.com/video/${vimeoId}?autoplay=1&title=0&byline=0&portrait=0`;
         videoFrame.src=embedUrl;
         modal.style.display='block';
+        setTimeout(()=>{modal.style.opacity='1';modal.style.visibility='visible';},10);
         document.body.style.overflow='hidden';
     };
-    
     const closeVideoModal=()=>{
-        modal.style.display='none';
-        videoFrame.src='';
-        document.body.style.overflow='auto';
+        modal.style.opacity='0';
+        modal.style.visibility='hidden';
+        setTimeout(()=>{
+            modal.style.display='none';
+            videoFrame.src='about:blank';
+            document.body.style.overflow='auto';
+        },200);
     };
-    
-    aboutImageContainer.addEventListener('click',(e)=>{
+    aboutImageContainer.addEventListener('click',function(e){
         e.preventDefault();
         const videoUrl=aboutImageContainer.getAttribute('data-video');
         openVideoModal(videoUrl);
     });
-    
     closeBtn.addEventListener('click',closeVideoModal);
-    
-    modal.addEventListener('click',(e)=>{
-        if(e.target===modal){
-            closeVideoModal();
-        }
-    });
-    
-    document.addEventListener('keydown',(e)=>{
-        if(e.key==='Escape'&&modal.style.display==='block'){
-            closeVideoModal();
-        }
-    });
+    modal.addEventListener('click',function(e){if(e.target===modal){closeVideoModal();}});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&modal.style.display==='block'){closeVideoModal();}});
 });
 </script>
