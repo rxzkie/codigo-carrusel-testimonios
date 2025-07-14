@@ -1,3 +1,4 @@
+<div style="width:100%;max-width:1440px;margin:0 auto;padding:28px 0 38px 0;text-align:center;font-family:'Poppins',sans-serif;font-weight:650;font-size:2.6rem;line-height:1.2;color:#fff;letter-spacing:-0.5px; margin-bottom:60px">Testimonios reales de quienes <br> decidieron ir por más</div>
 <div id="videoCarousel">
     <div id="carouselContainer">
         <div id="videoTrack">
@@ -31,14 +32,15 @@
 
 <div id="videoModal">
     <div id="modalContent">
-        <span id="closeBtn">&times;</span>
+        <span id="closeBtn">×</span>
         <div id="videoWrapper">
             <iframe id="videoFrame" src="" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
         </div>
     </div>
 </div>
 
-<style>@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');#videoCarousel{width:100%;max-width:1440px;margin:0 auto;padding:20px;font-family:'Poppins',sans-serif;display:flex;align-items:center;justify-content:center;z-index:1;}#carouselContainer{position:relative;overflow:hidden;border-radius:15px;width:100%;user-select:none;margin:0;z-index:1;}#videoTrack{display:flex;gap:20px;align-items:center;justify-content:center;flex-wrap:wrap;}.videoItem{flex:0 0 calc(33.33% - 14px);aspect-ratio:16/9;border-radius:15px;position:relative;cursor:pointer;box-sizing:border-box;overflow:hidden;transition:all 0.3s;min-width:280px;}.videoThumb{width:100%;height:100%;background-size:cover;background-position:center;background-repeat:no-repeat;border-radius:15px;position:relative;transition:all 0.3s;overflow:hidden;}.hoverVideo{z-index:2;}.videoOverlay{position:absolute;inset:0;background:rgba(0,0,0,0.08)!important;display:flex;align-items:flex-start;justify-content:flex-start;border-radius:15px;opacity:0;transition:opacity 0.3s;padding:15px;z-index:3;}.videoThumb:hover .videoOverlay{opacity:1;}.playButton{background:rgba(255,255,255,0.45)!important;color:#111!important;font-size:11px!important;padding:4px 9px!important;border-radius:30px!important;}
+<style>@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');#videoCarousel{width:100%;max-width:1440px;margin:0 auto;padding:20px;font-family:'Poppins',sans-serif;display:flex;align-items:center;justify-content:center;z-index:1;}#carouselContainer{position:relative;overflow:hidden;border-radius:15px;width:100%;user-select:none;margin:0;z-index:1;}#videoTrack{display:flex;gap:20px;align-items:center;justify-content:center;flex-wrap:wrap;}.videoItem{flex:0 0 calc(33.33% - 14px);aspect-ratio:16/9;border-radius:15px;position:relative;cursor:pointer;box-sizing:border-box;overflow:hidden;transition:all 0.3s;min-width:280px;}.videoThumb{width:100%;height:100%;background-size:cover;background-position:center;background-repeat:no-repeat;border-radius:15px;position:relative;transition:all 0.3s;overflow:hidden;}.hoverVideo{z-index:2;opacity:0;}
+.videoOverlay{position:absolute;inset:0;background:rgba(0,0,0,0.08)!important;display:flex;align-items:flex-start;justify-content:flex-start;border-radius:15px;opacity:0;transition:opacity 0.3s;padding:15px;z-index:3;}.videoThumb:hover .videoOverlay{opacity:1;}.playButton{background:rgba(255,255,255,0.45)!important;color:#111!important;font-size:11px!important;padding:4px 9px!important;border-radius:30px!important;}
 .playButton span{color:#111!important;font-size:13px!important;}
 .playButton span::first-letter{color:#111!important;}
 .videoOverlay{opacity:1 !important;}
@@ -51,11 +53,24 @@ document.addEventListener('DOMContentLoaded',function(){
     const modal=document.getElementById('videoModal');
     const videoFrame=document.getElementById('videoFrame');
     const closeBtn=document.getElementById('closeBtn');
-    document.querySelectorAll('.videoThumb').forEach((thumb)=>{
+    const thumbs=document.querySelectorAll('.videoThumb');
+    
+    thumbs.forEach((thumb)=>{
         const hoverVideo=thumb.querySelector('.hoverVideo');
-        thumb.addEventListener('mouseenter',()=>{if(window.innerWidth>768){hoverVideo.style.display='block';}});
-        thumb.addEventListener('mouseleave',()=>{if(window.innerWidth>768){hoverVideo.style.display='none';}});
+        thumb.addEventListener('mouseenter',()=>{
+            if(window.innerWidth>768){
+                hoverVideo.style.display='block';
+                hoverVideo.style.opacity='1';
+            }
+        });
+        thumb.addEventListener('mouseleave',()=>{
+            if(window.innerWidth>768){
+                hoverVideo.style.display='none';
+                hoverVideo.style.opacity='0';
+            }
+        });
     });
+    
     const openVideoModal=(videoUrl)=>{
         const vimeoId=videoUrl.split('/').pop();
         const embedUrl=`https://player.vimeo.com/video/${vimeoId}?autoplay=1&title=0&byline=0&portrait=0`;
@@ -67,6 +82,7 @@ document.addEventListener('DOMContentLoaded',function(){
         document.body.style.position='fixed';
         document.body.style.width='100%';
     };
+    
     const closeVideoModal=()=>{
         modal.style.display='none';
         modal.style.opacity='0';
@@ -75,7 +91,14 @@ document.addEventListener('DOMContentLoaded',function(){
         document.body.style.overflow='auto';
         document.body.style.position='static';
         document.body.style.width='auto';
+        
+        thumbs.forEach((thumb)=>{
+            const hoverVideo=thumb.querySelector('.hoverVideo');
+            hoverVideo.style.display='none';
+            hoverVideo.style.opacity='0';
+        });
     };
+    
     items.forEach(item=>{
         item.addEventListener('click',function(e){
             e.preventDefault();
@@ -84,8 +107,25 @@ document.addEventListener('DOMContentLoaded',function(){
             openVideoModal(videoUrl);
         });
     });
-    if(closeBtn){closeBtn.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();closeVideoModal();});}
-    modal.addEventListener('click',function(e){if(e.target===modal){closeVideoModal();}});
-    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&modal.style.display==='block'){closeVideoModal();}});
+    
+    if(closeBtn){
+        closeBtn.addEventListener('click',function(e){
+            e.preventDefault();
+            e.stopPropagation();
+            closeVideoModal();
+        });
+    }
+    
+    modal.addEventListener('click',function(e){
+        if(e.target===modal){
+            closeVideoModal();
+        }
+    });
+    
+    document.addEventListener('keydown',function(e){
+        if(e.key==='Escape'&&modal.style.display==='block'){
+            closeVideoModal();
+        }
+    });
 });
 </script>
