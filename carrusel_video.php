@@ -1,7 +1,24 @@
-<div style="width:100%;max-width:1440px;margin:0 auto;padding:28px 0 38px 0;text-align:center;font-family:'Poppins',sans-serif;font-weight:650;font-size:2.6rem;line-height:1.2;color:#fff;letter-spacing:-0.5px; margin-bottom:60px">Testimonios reales de quienes <br> decidieron ir por más</div>
-<div id="videoCarousel">
-    <div id="carouselContainer">
-        <div id="videoTrack">
+<h2 id="titulo-carrusel">Testimonios reales de quienes <br id="titulo-br">decidieron ir por más</h2>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+#titulo-carrusel{width:100%;max-width:1440px;margin:0 auto 40px auto;padding:18px 0 18px 0;text-align:center;font-family:'Poppins',sans-serif;font-weight:650;font-size:2.2rem;line-height:1.1;color:#fff;letter-spacing:-0.5px;}
+#titulo-br{display:inline;}
+@media (max-width:768px){
+  #titulo-carrusel{font-size:1.5rem!important;line-height:1.1;word-break:keep-all;margin-bottom:32px!important;}
+  #titulo-br{display:block;}
+}
+@media (max-width:480px){
+  #titulo-carrusel{font-size:1.2rem!important;line-height:1.05;word-break:keep-all;margin-bottom:28px!important;}
+  #titulo-br{display:block;}
+}
+@media (max-width:360px){
+  #titulo-carrusel{font-size:1rem!important;line-height:1;word-break:keep-all;margin-bottom:24px!important;}
+  #titulo-br{display:block;}
+}
+</style>
+<div id="videoCarouselBobby">
+    <div id="carouselContainerBobby">
+        <div id="videoTrackBobby">
             <div class="videoItem" data-video="https://vimeo.com/1100895052">
                 <div class="videoThumb" style="background-image: url('https://i.ibb.co/pBkKWfc8/Puedro-Cueto-Mentorias-Bobby.png');">
                     <iframe class="hoverVideo" src="https://player.vimeo.com/video/1100895052?autoplay=1&loop=1&muted=1&title=0&byline=0&portrait=0&controls=0&background=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="display:none;position:absolute;top:0;left:0;width:100%;height:100%;border-radius:15px;border:none;"></iframe>
@@ -30,29 +47,29 @@
     </div>
 </div>
 
-<div id="videoModal">
-    <div id="modalContent">
-        <span id="closeBtn">×</span>
-        <div id="videoWrapper">
-            <iframe id="videoFrame" src="" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+<div id="videoModalBobby">
+    <div id="modalContentBobby">
+        <span id="closeBtnBobby">×</span>
+        <div id="videoWrapperBobby">
+            <iframe id="videoFrameBobby" src="" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
         </div>
     </div>
 </div>
 
-<style>@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');#videoCarousel{width:100%;max-width:1440px;margin:0 auto;padding:20px;font-family:'Poppins',sans-serif;display:flex;align-items:center;justify-content:center;z-index:1;}#carouselContainer{position:relative;overflow:hidden;border-radius:15px;width:100%;user-select:none;margin:0;z-index:1;}#videoTrack{display:flex;gap:20px;align-items:center;justify-content:center;flex-wrap:wrap;}.videoItem{flex:0 0 calc(33.33% - 14px);aspect-ratio:16/9;border-radius:15px;position:relative;cursor:pointer;box-sizing:border-box;overflow:hidden;transition:all 0.3s;min-width:280px;}.videoThumb{width:100%;height:100%;background-size:cover;background-position:center;background-repeat:no-repeat;border-radius:15px;position:relative;transition:all 0.3s;overflow:hidden;}.hoverVideo{z-index:2;opacity:0;}
+<style>@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');#videoCarouselBobby{width:100%;max-width:1440px;margin:0 auto;padding:20px;font-family:'Poppins',sans-serif;display:flex;align-items:center;justify-content:center;z-index:1;}#carouselContainerBobby{position:relative;overflow:hidden;border-radius:15px;width:100%;user-select:none;margin:0;z-index:1;}#videoTrackBobby{display:flex;gap:20px;align-items:center;justify-content:center;flex-wrap:wrap;}.videoItem{flex:0 0 calc(33.33% - 14px);aspect-ratio:16/9;border-radius:15px;position:relative;cursor:pointer;box-sizing:border-box;overflow:hidden;transition:all 0.3s;min-width:280px;}.videoThumb{width:100%;height:100%;background-size:cover;background-position:center;background-repeat:no-repeat;border-radius:15px;position:relative;transition:all 0.3s;overflow:hidden;}.hoverVideo{z-index:2;opacity:0;}
 .videoOverlay{position:absolute;inset:0;background:rgba(0,0,0,0.08)!important;display:flex;align-items:flex-start;justify-content:flex-start;border-radius:15px;opacity:0;transition:opacity 0.3s;padding:15px;z-index:3;}.videoThumb:hover .videoOverlay{opacity:1;}.playButton{background:rgba(255,255,255,0.45)!important;color:#111!important;font-size:11px!important;padding:4px 9px!important;border-radius:30px!important;}
 .playButton span{color:#111!important;font-size:13px!important;}
 .playButton span::first-letter{color:#111!important;}
 .videoOverlay{opacity:1 !important;}
 .playButton{opacity:1 !important;}
-.videoThumb:hover .videoOverlay{opacity:1 !important;}#videoModal{display:none;position:fixed;z-index:999999999;left:0;top:0;width:100vw;height:100vh;background-color:rgba(0,0,0,0.95);backdrop-filter:blur(10px);}#modalContent{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:32vw;max-width:480px;height:auto;aspect-ratio:16/9;max-height:40vh;background:transparent;z-index:999999999;}#videoWrapper{width:100%;height:100%;position:relative;z-index:999999999;}#videoWrapper iframe{width:100%;height:100%;border-radius:15px;border:none;}#closeBtn{position:absolute;top:-60px;right:0;color:white;font-size:50px;font-weight:bold;cursor:pointer;z-index:999999999;transition:opacity 0.3s;}#closeBtn:hover{opacity:0.7;}@media (max-width:1200px){.videoItem{flex:0 0 calc(50% - 10px);min-width:300px;}#videoTrack{gap:15px;}#modalContent{width:50vw;max-width:95vw;max-height:50vh;}}@media (max-width:768px){#videoCarousel{padding:15px;}#videoTrack{gap:15px;flex-direction:column;}.videoItem{flex:0 0 auto;width:100%;max-width:500px;min-width:auto;}.playButton{background:rgba(255,255,255,0.45)!important;color:#111!important;font-size:11px!important;padding:4px 9px!important;border-radius:30px!important;}}@media (max-width:480px){#videoCarousel{padding:10px;}#carouselContainer{border-radius:10px;}.videoItem{border-radius:10px;}.videoThumb{border-radius:10px;}.videoOverlay{border-radius:10px;padding:10px;}.playButton{font-size:12px;padding:8px 15px;}#modalContent{width:99vw;max-height:60vh;}#closeBtn{top:-40px;font-size:35px;}}@media (max-width:360px){#modalContent{width:100vw;max-height:55vh;}#closeBtn{top:-35px;font-size:30px;}}@media (max-height:600px) and (orientation:landscape){#modalContent{height:50vh;max-height:50vh;}#closeBtn{top:-40px;}}</style>
+.videoThumb:hover .videoOverlay{opacity:1 !important;}#videoModalBobby{display:none;position:fixed;z-index:999999999;left:0;top:0;width:100vw;height:100vh;background-color:rgba(0,0,0,0.95);backdrop-filter:blur(10px);}#modalContentBobby{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:32vw;max-width:480px;height:auto;aspect-ratio:16/9;max-height:40vh;background:transparent;z-index:999999999;}#videoWrapperBobby{width:100%;height:100%;position:relative;z-index:999999999;}#videoWrapperBobby iframe{width:100%;height:100%;border-radius:15px;border:none;}#closeBtnBobby{position:absolute;top:-60px;right:0;color:white;font-size:50px;font-weight:bold;cursor:pointer;z-index:999999999;transition:opacity 0.3s;}#closeBtnBobby:hover{opacity:0.7;}@media (max-width:1200px){.videoItem{flex:0 0 calc(50% - 10px);min-width:300px;}#videoTrackBobby{gap:15px;}#modalContentBobby{width:50vw;max-width:95vw;max-height:50vh;}}@media (max-width:768px){#videoCarouselBobby{padding:15px;}#videoTrackBobby{gap:15px;flex-direction:column;}.videoItem{flex:0 0 auto;width:100%;max-width:500px;min-width:auto;}.playButton{background:rgba(255,255,255,0.45)!important;color:#111!important;font-size:11px!important;padding:4px 9px!important;border-radius:30px!important;}}@media (max-width:480px){#videoCarouselBobby{padding:10px;}#carouselContainerBobby{border-radius:10px;}.videoItem{border-radius:10px;}.videoThumb{border-radius:10px;}.videoOverlay{border-radius:10px;padding:10px;}.playButton{font-size:12px;padding:8px 15px;}#modalContentBobby{width:99vw;max-height:60vh;}#closeBtnBobby{top:-40px;font-size:35px;}}@media (max-width:360px){#modalContentBobby{width:100vw;max-height:55vh;}#closeBtnBobby{top:-35px;font-size:30px;}}@media (max-height:600px) and (orientation:landscape){#modalContentBobby{height:50vh;max-height:50vh;}#closeBtnBobby{top:-40px;}}</style>
 
 <script>
 document.addEventListener('DOMContentLoaded',function(){
     const items=document.querySelectorAll('.videoItem');
-    const modal=document.getElementById('videoModal');
-    const videoFrame=document.getElementById('videoFrame');
-    const closeBtn=document.getElementById('closeBtn');
+    const modal=document.getElementById('videoModalBobby');
+    const videoFrame=document.getElementById('videoFrameBobby');
+    const closeBtn=document.getElementById('closeBtnBobby');
     const thumbs=document.querySelectorAll('.videoThumb');
     
     thumbs.forEach((thumb)=>{
