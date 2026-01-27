@@ -5,7 +5,7 @@
     </div>
     <div id="bobbyProgramsContainer">
         <div id="bobbyProgramBlock1" class="bobbyProgramBlock" data-link="#mentoria">
-            <div id="bobbyProgramImage1" style="background-image: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=600&fit=crop');">
+            <div id="bobbyProgramImage1" style="background-image: url('https://i.ibb.co/DHVJzSGB/image.jpg');">
                 <div id="bobbyProgramOverlay1">
                     <div id="bobbyProgramContent1">
                         <div id="bobbyProgramText1">Uno a uno con</div>
@@ -21,7 +21,7 @@
             </div>
         </div>
         <div id="bobbyProgramBlock2" class="bobbyProgramBlock" data-link="#metodo">
-            <div id="bobbyProgramImage2" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop');">
+            <div id="bobbyProgramImage2" style="background-image: url('https://i.ibb.co/7x0KT816/image.jpg');">
                 <div id="bobbyProgramOverlay2">
                     <div id="bobbyProgramContent2">
                         <div id="bobbyProgramText2">Crecimiento Empresarial</div>
