@@ -4,14 +4,14 @@
         <p id="bobbyProgramsSubtitle">Conecta profundamente, participa completamente y evoluciona intencionalmente con los programas exclusivos de Bobby diseñados para líderes que buscan transformar su visión en resultados concretos.</p>
     </div>
     <div id="bobbyProgramsContainer">
-        <div id="bobbyProgramBlock1" class="bobbyProgramBlock" data-link="#mentoria">
+        <div id="bobbyProgramBlock1" class="bobbyProgramBlock" data-link="https://bobbymcawley.cl/mentoria/">
             <div id="bobbyProgramImage1" style="background-image: url('https://i.ibb.co/DHVJzSGB/image.jpg');">
                 <div id="bobbyProgramOverlay1">
                     <div id="bobbyProgramContent1">
                         <div id="bobbyProgramText1">Uno a uno con</div>
                         <div id="bobbyProgramLabel1">Bobby McAwley</div>
                         <div id="bobbyProgramDesc1">Mentoría privada y personalizada para empresarios consolidados. Trabajamos en tu negocio para tomar decisiones que impulsen el crecimiento de tu compañía.</div>
-                        <a id="bobbyProgramBtn1" href="#mentoria">Comenzar la Mentoría</a>
+                        <span id="bobbyProgramBtn1" role="button" tabindex="0" data-href="https://bobbymcawley.cl/mentoria/">Comenzar la Mentoría</span>
                     </div>
                     <div id="bobbyProgramBadge1">
                         <div id="bobbyProgramBadgeTop1">BOBBY MCAWLEY</div>
@@ -20,14 +20,14 @@
                 </div>
             </div>
         </div>
-        <div id="bobbyProgramBlock2" class="bobbyProgramBlock" data-link="#metodo">
+        <div id="bobbyProgramBlock2" class="bobbyProgramBlock" data-link="https://bobbymcawley.cl/crecimiento-empresarial/">
             <div id="bobbyProgramImage2" style="background-image: url('https://i.ibb.co/7x0KT816/image.jpg');">
                 <div id="bobbyProgramOverlay2">
                     <div id="bobbyProgramContent2">
                         <div id="bobbyProgramText2">Crecimiento Empresarial</div>
                         <div id="bobbyProgramLabel2">Exponencial</div>
                         <div id="bobbyProgramDesc2">Programa estratégico para escalar tu empresa. Soluciones prácticas en control financiero, orden operativo y sistemas de venta para impulsar el crecimiento. Mejorar eficiencia y fortalecer la rentabilidad.</div>
-                        <a id="bobbyProgramBtn2" href="#metodo">Comenzar Programa</a>
+                        <span id="bobbyProgramBtn2" role="button" tabindex="0" data-href="https://bobbymcawley.cl/crecimiento-empresarial/">Comenzar Programa</span>
                     </div>
                     <div id="bobbyProgramBadge2">
                         <div id="bobbyProgramBadgeTop2">BOBBY MCAWLEY</div>
@@ -56,7 +56,7 @@
 #bobbyProgramText1,#bobbyProgramText2{font-size:32px;font-weight:600;color:#fff;text-transform:none;letter-spacing:-0.5px;font-family:'Poppins',sans-serif;margin-bottom:8px;line-height:1.2;text-shadow:2px 2px 10px rgba(0,0,0,0.5);}
 #bobbyProgramLabel1,#bobbyProgramLabel2{font-size:32px;font-weight:700;color:#fff;text-transform:none;letter-spacing:-0.5px;font-family:'Poppins',sans-serif;line-height:1.2;text-shadow:2px 2px 10px rgba(0,0,0,0.5);margin-bottom:16px;}
 #bobbyProgramDesc1,#bobbyProgramDesc2{font-size:15px;font-weight:400;color:rgba(255,255,255,0.9);line-height:1.5;margin-bottom:30px;max-width:90%;text-shadow:1px 1px 5px rgba(0,0,0,0.5);font-family:'Poppins',sans-serif;}
-#bobbyProgramBtn1,#bobbyProgramBtn2{background:rgba(255,255,255,0.15);color:#fff;font-size:14px;font-weight:500;padding:12px 28px;border-radius:30px;text-decoration:none;transition:all 0.3s ease;display:inline-block;box-shadow:0 2px 8px rgba(0,0,0,0.2);font-family:'Poppins',sans-serif;letter-spacing:0.3px;text-transform:none;backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.2);position:absolute;bottom:70px;left:40px;}
+#bobbyProgramBtn1,#bobbyProgramBtn2{background:rgba(255,255,255,0.15);color:#fff;font-size:14px;font-weight:500;padding:12px 28px;border-radius:30px;text-decoration:none;transition:all 0.3s ease;display:inline-block;box-shadow:0 2px 8px rgba(0,0,0,0.2);font-family:'Poppins',sans-serif;letter-spacing:0.3px;text-transform:none;backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.2);position:absolute;bottom:70px;left:40px;cursor:pointer;}
 #bobbyProgramBtn1:hover,#bobbyProgramBtn2:hover{background:rgba(255,255,255,0.25);transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,0,0,0.3);}
 #bobbyProgramBadge1,#bobbyProgramBadge2{background:#000;border-radius:8px;padding:12px 20px;width:auto;display:inline-block;align-self:flex-end;box-shadow:0 4px 15px rgba(0,0,0,0.4);position:absolute;bottom:50px;right:40px;z-index:15;}
 #bobbyProgramBadgeTop1,#bobbyProgramBadgeTop2{font-size:10px;font-weight:600;color:#fff;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;font-family:'Poppins',sans-serif;}
@@ -74,16 +74,10 @@
 
 <script>
 document.addEventListener('DOMContentLoaded',function(){
-    const bobbyProgramBlocks=document.querySelectorAll('.bobbyProgramBlock');
-    bobbyProgramBlocks.forEach(block=>{
-        block.addEventListener('click',function(e){
-            if(e.target.closest('a'))return;
-            e.preventDefault();
-            const link=block.getAttribute('data-link');
-            if(link){
-                window.location.href=link;
-            }
-        });
-    });
+    function goTo(url){window.location.href=url;}
+    var b1=document.getElementById('bobbyProgramBtn1'),b2=document.getElementById('bobbyProgramBtn2');
+    if(b1){b1.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();e.stopImmediatePropagation();goTo(this.getAttribute('data-href'));},{capture:true});b1.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();goTo(this.getAttribute('data-href'));}});}
+    if(b2){b2.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();e.stopImmediatePropagation();goTo(this.getAttribute('data-href'));},{capture:true});b2.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();goTo(this.getAttribute('data-href'));}});}
 });
 </script>
+
